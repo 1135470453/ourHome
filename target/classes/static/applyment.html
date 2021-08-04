@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable-no">
+    <title>山东大学服务大厅</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .grayFont{
+            color: #586075;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <img src="picture/applyment_head1.jpg" width="100%">
+        </div>
+        <div class="row" style="border: #888888 2px solid; overflow: hidden; width: 100%; height: 670px; min-height: 400px;margin-left: 5px">
+            <div class="row">
+                <img src="picture/applyment_head2.jpg" width="100%">
+            </div>
+            <div class="row" style="overflow: auto">
+                <img src="picture/applyment_head3.png" height="500px">
+            </div>
+        </div>
+        <div class="row">
+            <img src="picture/applyment_head4.png" width="100%">
+        </div>
+        <div class="row">
+                <table class="table table-bordered" style="margin-left: 5px">
+                    <tbody>
+                    <tr>
+                        <td width="35%"><b style="color: #adadad">任务环节</b></td>
+                        <td width="65%">服务发起人</td>
+                    </tr>
+                    <tr>
+                        <td><b style="color: #adadad">办理人</b></td>
+                        <td><p id="name1"></p> </td>
+                    </tr>
+                    <tr>
+                        <td><b style="color: #adadad">办理意见</b></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><b style="color: #adadad">办理结果</b></td>
+                        <td>提交申请</td>
+                    </tr>
+                    <tr>
+                        <td><b style="color: #adadad">办理时间</b></td>
+                        <td><p id="time1"></p></td>
+                    </tr>
+                    </tbody>
+                </table>
+        </div>
+        <div class="row">
+            <table class="table table-bordered" style="margin-left: 5px">
+                <tbody>
+                <tr>
+                    <td width="35%"><b style="color: #adadad">任务环节</b></td>
+                    <td width="65%">辅导员审核</td>
+                </tr>
+                <tr>
+                    <td><b style="color: #adadad">办理人</b></td>
+                    <td>张洁</td>
+                </tr>
+                <tr>
+                    <td><b style="color: #adadad">办理意见</b></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b style="color: #adadad">办理结果</b></td>
+                    <td>同意</td>
+                </tr>
+                <tr>
+                    <td><b style="color: #adadad">办理时间</b></td>
+                    <td><p id="time2"></p></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <table class="table table-bordered" style="margin-left: 5px">
+                <tbody>
+                <tr>
+                    <td width="35%"><b style="color: #adadad">任务环节</b></td>
+                    <td width="65%">学院分管领导审核</td>
+                </tr>
+                <tr>
+                    <td><b style="color: #adadad">办理人</b></td>
+                    <td>孙国翠</td>
+                </tr>
+                <tr>
+                    <td><b style="color: #adadad">办理意见</b></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b style="color: #adadad">办理结果</b></td>
+                    <td>同意</td>
+                </tr>
+                <tr>
+                    <td><b style="color: #adadad">办理时间</b></td>
+                    <td><p id="time3"></p></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <img src="picture/applyment_head5.jpg" width="100%">
+        </div>
+        <div class="row">
+            <table class="table table-bordered" style="margin-left: 5px" width="90%">
+                <tbody>
+                <tr>
+                    <td style="background-color: #f9f3f3;text-align: center">
+                        <b class="grayFont" style="font-size: larger;">基础信息 Basic information</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grayFont" style="background-color: #f9f3f3"><b>学号<br>student ID no.</b></td>
+                </tr>
+                <tr>
+                    <td><p id="ID"></p></td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color: #f9f3f3">
+                        <b>姓名<br>Passport name</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="name2"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color: #f9f3f3">
+                        <b>性别<br>Gender</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td><p id="gender"></p> </td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color: #f9f3f3">
+                        <b>年龄<br>Age</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color: #f9f3f3">
+                        <b>所在学院<br>College</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        化学与化工学院
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color:  #f9f3f3">
+                        <b>专业<br>Mager</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        化学
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color:  #f9f3f3">
+                        <b>手机号<br>Cellphone No.</br></b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        19862183716
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color:  #f9f3f3">
+                        <b>学生类型<br>Student Type</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        本科生
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color:  #f9f3f3">
+                        <b>家庭紧急联系人姓名<br>Emergency contact person's name</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>张佳伟</td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color:  #f9f3f3">
+                        <b>家庭紧急联系人电话<br>Emergency contact person's cellphone No.</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        13281834826
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color:  #f9f3f3">
+                        <b>辅导员姓名<br>Counseler's name</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        张洁
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color:  #f9f3f3">
+                        <b>辅导员电话<br>Counseler phone</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        135 7316 7550
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color: #f9f3f3;text-align: center">
+                        <b style="font-size: larger;">外出信息 Information on going out</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f9f3f3">
+                        <b>外出校区</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="40px">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color: #f9f3f3">
+                        <b>外出类型<br>Type for going out</b>
+                    </td>
+                </tr>
+                <tr>
+                    <div class=""></div>
+                    <td>
+                        <img src="picture/applyment_yes.png" width="20px">
+                        临时外出 Temporory out<br>
+                        <div style="height: 10px;width: 100%"></div>
+                        <img src="picture/applyment_no.png" width="20px" >
+                        固定外出 Fixed out
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color: #f9f3f3">
+                        <b>外出事由<br>Reasons for going out</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="picture/applyment_no.png" width="20px">
+                        跨校区学习、实习、实验Cross campus study，practice and experiment<br>
+                        <div style="height: 10px;width: 100%"></div>
+                        <img src="picture/applyment_yes.png" width="20px">
+                        外出实习、实验等常规业务Routine business such as internship and experiment<br>
+                        <div style="height: 10px;width: 100%"></div>
+                        <img src="picture/applyment_no.png" width="20px">
+                        外出办事Personal affairs(provide reasons)<br>
+                        <div style="height: 10px;width: 100%"></div>
+                        <img src="picture/applyment_no.png" width="20px">
+                        其他原因Other situations (provide reasons)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color: #f9f3f3">
+                        <b>外出具体事由描述<br> Description of specific reasons for going out
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="40px">
+                    </td>
+                </tr>
+                <tr>
+                    <td  class="grayFont" style="background-color: #f9f3f3">
+                        <b>外出目的地是否本市<br>Destination</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="picture/applyment_yes.png" width="20px">
+                        本市 Local city
+                        <div style="height: 10px;width: 100%"></div>
+                        <img src="picture/applyment_no.png" width="20px">
+                        外市 Other city
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color: #f9f3f3">
+                        <b>外出目的地为校区时填写<br> When you go out to other campus, fill in .
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="40px">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color: #f9f3f3">
+                        <b>外出目的地非校区时填写<br>Destination</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        济南市长清区
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color: #f9f3f3">
+                        <b>是否校外住宿<br> Will you live off-campus while you are away?
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="picture/applyment_no.png" width="20px"> 是 Yes
+                        <img src="picture/applyment_yes.png" width="20px"> 否 No
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color: #f9f3f3;">
+                        <b>校外住宿地址<br> Will you live off-campus while you are away?
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="40px">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color: #f9f3f3">
+                        <b>预计出校日期<br> Expected leaving date
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="outDate"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td  class="grayFont" style="background-color: #f9f3f3">
+                        <b>预计出校时间<br>  Expected leaving time
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        08:00
+                    </td>
+                </tr>
+                <tr>
+                    <td  class="grayFont" style="background-color: #f9f3f3">
+                        <b>预计返校日期<br> Expected returning date
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="backDate"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color: #f9f3f3">
+                        <b>预计返校时间<br> Expected returning time
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        22:00
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color: #f9f3f3">
+                        <b>上传相关附件</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="picture/applyment_head6.png" width="95%">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grayFont"  style="background-color: #f9f3f3">
+                        <img src="picture/applyment_yes.png" width="20px">
+                        <b style="">本人承诺以上信息真实准确，服从学校常态化疫情防控形势下的校园管理规定，严格做好两点一线个人防护。<br>
+                        I confirm that the information given in this form is true, complete and accurate. Under regular epidemic prevention and control, I will obey University’s regulations as well as be mindful of personal protection.
+                        </b>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <img src="picture/applyment_head7.png" width="100%">
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script>
+    var studentName = "",
+        time1 = "",
+        time2 = "",
+        time3 = "",
+        studentId = "",
+        gender = "",
+        today = '2021-08-',
+        yesteday = '2021-08-';
+    gettime();
+    getInfo();
+    insertInfo();
+    function insertInfo(){
+        $('#name1').html(studentName);
+        $('#name2').html(studentName);
+        $('#ID').html(studentId);
+        $('#time1').html(time1);
+        $('#time2').html(time2);
+        $('#time3').html(time3);
+        $('#backDate').html(today);
+        $('#outDate').html(today);
+        $('#gender').html(gender);
+    }
+    function getInfo(){
+        studentName = getUrlParam("name");
+        studentId = getUrlParam("student_id");
+        gender = getUrlParam("gender");
+    }
+    function gettime() {
+        var d = new Date();
+        var n_day = d.getDate();
+        var n_yesteday = d.getDate()-1;
+        if (n_day<10){
+            today = today+"0"+n_day;
+        }else {
+            today = today+n_day;
+        }
+        if (n_yesteday<10){
+            yesteday = yesteday+"0"+n_yesteday;
+        }else {
+            yesteday = yesteday+n_yesteday;
+        }
+        time1 = yesteday+" 08:12:12";
+        time2 = yesteday+" 15:11:56";
+        time3 = yesteday+" 17:13:55";
+    }
+    function getUrlParam(name) {
+        //构造一个含有目标参数的正则表达式对象
+        var reg = new RegExp("(^|&)"+name+"=([^&]*)(&|$)");
+        //匹配目标参数
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) {
+            return decodeURI(r[2]);
+        } else {
+            //返回参数值
+            return "";
+        }
+    }
+</script>
+</html>

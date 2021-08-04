@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable-no">
+    <title>罗罗罗</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        @font-face {
+            font-family: 'cuteFont';
+            src: url("css/fontSize/cute.TTF");
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12 col-sm-12" style="align-content: center">
+              <img src="picture/pig_head1.png" width="50px" style="margin-top: 18px">
+              <img src="picture/cabbage_head3.png" width="50px">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-10 col-sm-10" style="align-content: center">
+              <h5 style="font-family: cuteFont;font-size: xx-large">猪屁屁和小白菜的网站</h5>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-10 col-sm-10" style="align-content: center">
+              <h5 style="font-size: large;font-family: cuteFont" id="kydays"></h5>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-12 col-md-12">
+              <div class="panel panel-default">
+                  <!-- Default panel contents -->
+                  <div class="panel-heading">我们平时用的网站哦</div>
+                  <div class="panel-body">
+                      <p>我们平时用的网站哦</p>
+                      <table class="table">
+                          <tbody>
+                          <tr>
+                              <td>
+                                  入校码
+                              </td>
+                              <td>
+                                  <a class="btn btn-danger" href="school_login.html">go</a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>有书记的申请页面</td>
+                              <td>
+                                  <a class="btn btn-danger" href="apply.html">go</a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>山东大学官网</td>
+                              <td>
+                                  <a class="btn btn-danger" href="https://www.sdu.edu.cn/">go</a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>电子科技大学官网</td>
+                              <td>
+                                  <a class="btn btn-danger" href="https://www.uestc.edu.cn/">go</a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>电子科技大学服务大厅</td>
+                              <td>
+                                  <a class="btn btn-danger" href="https://eportal.uestc.edu.cn/new/index.html">go</a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>github</td>
+                              <td>
+                                  <a class="btn btn-danger" href="https://github.com/">go</a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>王道考研</td>
+                              <td>
+                                  <a class="btn btn-danger" href="http://cskaoyan.com/forum.php">go</a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>南京大学官网</td>
+                              <td>
+                                  <a class="btn btn-danger" href="https://www.nju.edu.cn/">go</a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>南京大学研究生招生网</td>
+                              <td>
+                                  <a class="btn btn-danger" href="https://grawww.nju.edu.cn/912/list.htm">go</a>
+                              </td>
+                          </tr>
+                          <tr></tr>
+                          </tbody>
+                      </table>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+  <script src="js/jquery-3.5.1.min.js"></script>
+<script>
+
+    var days = daysDistance(today(),"2021-12-25");
+    $('#kydays').html("距离考研还有"+days+"天!");
+
+    //获取格式化的日期
+    function today(){
+        var today=new Date();
+        var str="";
+        str+=today.getFullYear()+"-";
+        var month=today.getMonth()+1;//返回值是 0（一月） 到 11（十二月） 之间的一个整数。
+        if(month<10){
+            str+="0";
+        }
+        str+=month+"-";
+        var day=today.getDate();//返回值是 1 ~ 31 之间的一个整数
+        if(day<10){
+            str+="0";
+        }
+        str+=day;
+        return str;
+    }
+
+    function daysDistance(date1, date2) {
+        //parse() 是 Date 的一个静态方法 , 所以应该使用 Date.parse() 来调用，而不是作为 Date 的实例方法。返回该日期距离 1970/1/1 午夜时间的毫秒数
+        date1 = Date.parse(date1);
+        date2 = Date.parse(date2);
+        //计算两个日期之间相差的毫秒数的绝对值
+        var distance= Math.abs(date2 - date1);
+        //毫秒数除以一天的毫秒数,就得到了天数
+        var days = Math.floor(distance / (24 * 3600 * 1000));
+        return days ;
+    };
+</script>
+</body>
+</html>

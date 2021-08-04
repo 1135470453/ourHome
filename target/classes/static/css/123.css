@@ -1,0 +1,101 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("static/pictureure/background.png");
+    background-repeat: no-repeat;
+}
+.whole{
+}
+.wholefrom{
+    margin: 0 auto;
+    margin-top: 150px;
+    padding: 1px 50px;
+    background-color:rgba(248,248,255,0.2);
+    width: 400px;
+    height: 380px;
+    border-radius: 10px;
+    text-align: center;
+}
+.wholefrom2{
+    margin: 0 auto;
+    margin-top: 150px;
+    padding: 1px 50px;
+    background-color:rgba(248,248,255,0.2);
+    width: 400px;
+    height: 320px;
+    border-radius: 10px;
+    text-align: center;
+}
+h1{
+    color: white;
+    /*border: 1px solid red;*/
+    font-size: 25px;
+    margin-top: 30px;
+}
+.inputbox{
+    margin-top: 10px;
+    /*border: 1px solid red;*/
+}
+.icon{
+    width: 20px;
+    height: 20px;
+    /*border: 1px solid red;*/
+    position: absolute;
+    margin-top: 16px;
+}
+
+.input1{
+    /*border: 1px solid red;*/
+}
+.input2{
+    /*border: 1px solid green;*/
+}
+input{
+    border: 0;
+    padding: 10px;
+    margin-top: 30px;
+    margin: 10px;
+    margin-left: 32px;
+    border-bottom: 1px solid white;
+    background-color: rgba(248,248,255,0);
+    color: white;
+    /*border: 1px solid green;*/
+}
+input::placeholder{
+    color: white;
+    align-content: center;
+}
+.btn{
+    margin-top: 15px;
+}
+button{
+    border: 0;
+    width: 260px;
+    height: 30px;
+    color: white;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+.btn1{
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+.btn2{
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+.mention{
+    /*border: 1px solid red;*/
+    width: 300px;
+    padding-left: 32px;
+}
+span{
+    /*border: 1px solid red;*/
+    color: whitesmoke;
+    font-size: 12px;
+    padding: 0;
+}
+u{
+    color: mediumblue;
+    font-size: 12px;
+    /*border: 1px solid red;*/
+    padding-left: 55px;
+}
