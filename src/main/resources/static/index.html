@@ -13,33 +13,36 @@
         }
     </style>
 </head>
+<!--添加一个可以增删查改常用网站的功能-->
 <body>
   <div class="container">
       <div class="row">
-          <div class="col-md-12 col-sm-12" style="align-content: center">
+          <div class="col-md-2 col-xs-2">
               <img src="picture/pig_head1.png" width="50px" style="margin-top: 18px">
+          </div>
+          <div class="col-md-2 col-xs-2">
               <img src="picture/cabbage_head3.png" width="50px">
           </div>
-      </div>
-      <div class="row">
-          <div class="col-md-10 col-sm-10" style="align-content: center">
-              <h5 style="font-family: cuteFont;font-size: xx-large">猪屁屁和小白菜的网站</h5>
+          <div class="col-md-8 col-xs-8">
+              <h4 style="font-family: cuteFont;margin-top: 20px">猪屁屁和小白菜的网站</h4>
           </div>
       </div>
       <div class="row">
-          <div class="col-md-10 col-sm-10" style="align-content: center">
-              <h5 style="font-size: large;font-family: cuteFont" id="kydays"></h5>
+          <div class="col-md-12 col-xs-12">
+              <h5 style="font-family: cuteFont;text-align: center" id="kydays"></h5>
           </div>
       </div>
       <div class="row">
           <div class="col-sm-12 col-md-12">
               <div class="panel panel-default">
                   <!-- Default panel contents -->
-                  <div class="panel-heading">我们平时用的网站哦</div>
-                  <div class="panel-body">
+                  <div class="panel-heading" style="display: flex;justify-content: space-around">
                       <p>我们平时用的网站哦</p>
+                      <button onclick="toReviseWebPage()">我要改一改</button>
+                  </div>
+                  <div class="panel-body">
                       <table class="table">
-                          <tbody>
+                          <tbody id="webBox">
                           <tr>
                               <td>
                                   入校码
@@ -104,6 +107,11 @@
               </div>
           </div>
       </div>
+      <div class="row">
+          <div>
+
+          </div>
+      </div>
   </div>
   <script src="js/jquery-3.5.1.min.js"></script>
 <script>
@@ -128,7 +136,7 @@
         str+=day;
         return str;
     }
-
+    //获取两个日期之间相差的时间(单位:天)
     function daysDistance(date1, date2) {
         //parse() 是 Date 的一个静态方法 , 所以应该使用 Date.parse() 来调用，而不是作为 Date 的实例方法。返回该日期距离 1970/1/1 午夜时间的毫秒数
         date1 = Date.parse(date1);
@@ -138,6 +146,32 @@
         //毫秒数除以一天的毫秒数,就得到了天数
         var days = Math.floor(distance / (24 * 3600 * 1000));
         return days ;
+    };
+    //跳转到常用网站修改页面
+    function toReviseWebPage(){
+        window.location.href='reviseWeb.html';
+    }
+    //获取所有常用网站
+    function getWeb(){
+        $.ajax({
+            type: "get",
+            url: "/web/getWeb",
+            success: function (data) {
+                $("#webBox").empty();
+                $.each(data, function(i, item) {
+                    $("#webBox").append("<tr>\n" +
+                        "                              <td>"+item.name+"</td>\n" +
+                        "                              <td>\n" +
+                        "                                  <a class=\"btn btn-danger\" href=\""+item.url+"\">go</a>\n" +
+                        "                              </td>\n" +
+                        "                          </tr>")
+                });
+            },
+            error: function (e) {
+                console.log(e.status);
+                console.log(e.responseText);
+            }
+        });
     };
 </script>
 </body>
