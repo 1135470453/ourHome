@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable-no">
+    <title>gotoschool</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .gp{
+            border-bottom:solid #398439 1.7px;
+            border-left:solid #398439 1.7px;
+            border-right:solid #398439 1.7px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            height: 18em;
+            margin-right: 5%;
+            margin-left: 5%;
+            margin-top: -20px;
+            background-image: url("picture/ngate.jpg");
+            background-size: 100% 100%;
+            position: relative;
+            z-index:1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <input type="image" src="picture/school_top.png" style="width: 100%;">
+        </div>
+        <div class="row" style="position:relative;z-index:2;height: 15em;background-image: url(picture/school_back.png);background-size:100% 100% ;margin-left: 5%;margin-right: 5%;border-radius: 10px;">
+
+            <div class="col-md-4 col-xs-4" style="margin-bottom: 10px;">
+<!--                <input type="image" style="margin-top: 20px;margin-left: 5px;width: 100%;" src="picture/photo.png">-->
+            </div>
+            <div class="col-md-6 col-xs-6">
+                <div style="margin-left: 1.3em">
+                    <p id="student_name" name="student_name" style="color: white;margin-top: 45px;margin-bottom:1px;font-size: 1.2em;font-weight: normal">周**</p>
+                    <p id="student_id" name="student_id" style="color: white;margin-top: 5px;margin-bottom:1px;font-size: 1em;font-weight: 500">2**********5</p>
+                    <p id="student_major" name="student_major" style="color: white;margin-top: 5px;margin-bottom:1px;font-size: 0.9em;font-weight: 700">化学与化工学院</p>
+                    <p id="id_card" name="id_card" style="color: white;margin-top: 5px;font-size: 1em;font-weight: 500">37**************29</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-2">
+                <input type="button" onclick="showOrhide()" style="border: none ;width: 2em;margin-top: 15px;background-color: transparent;">
+            </div>
+        </div>
+        <div class="row gp" >
+            <div class="col-xs-12 col-md-12" name="gatePicture" id="gatePicture" style="height: 11.5em;background-repeat:no-repeat;background-size: 100% 100%;margin-top: 1.8em;text-align: center">
+                <p style="margin-top: 11.2em;color: gray" id="time"></p>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 0.5em;">
+            <input type="image" onclick="changetos()" src="picture/door.png" style="width: 90%;margin-left: 5%;margin-right: 5%;">
+        </div>
+    </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        var showId = 0;
+        var name = "";
+        var student_id = "";
+        var user_id = "";
+        var name_s = "";
+        var student_id_s = "";
+        var user_id_s = "";
+        var place = "";
+        gettime();
+        getInf();
+        function getInf() {
+            name = getUrlParam("name") ;
+            if (name === "dad"){
+                name = "张佳伟"
+                name_s = "张**";
+                student_id = "201809161728"
+                student_id_s = "2**********8";
+                user_id = "371424200008300053";
+                user_id_s = "37**************53";
+            }else {
+                name = "周子琪";
+                name_s = "周**";
+                student_id = "20180027025"
+                student_id_s = "2**********5";
+                user_id = "371424200008300053";
+                user_id_s = "37**************53";
+            }
+            $('#student_name').html(name_s);
+            $('#student_id').html(student_id_s);
+            $('#id_card').html(user_id_s);
+        }
+        function gettime() {
+            var d = new Date();
+            var str = '';
+            str += d.getFullYear() + '-'; //获取当前年份
+            var month = d.getMonth() + 1;
+            if (month<=9){
+                str += '0'+month+'-';
+            }else {
+                str += month + '-';
+            }
+            str += d.getDate() + ' ';
+            str += d.getHours() + ':';
+            if (d.getMinutes()<'10'){
+                str += '0'+d.getMinutes()+':';
+            }else {
+                str += d.getMinutes() + ':';
+            }
+            str += d.getSeconds();
+            $('#time').html(str);
+        }
+        function changetos() {
+            window.location.href="gotoschool_index.html";
+         }
+        function showOrhide() {
+            console.log("showOrHide");
+            if (showId == 0){
+                console.log(showId);
+                $('#student_name').html(name);
+                $('#student_id').html(student_id);
+                $('#id_card').html(user_id);
+                showId=1;
+            }else {
+                console.log(showId);
+                $('#student_name').html(name_s);
+                $('#student_id').html(student_id_s);
+                $('#id_card').html(user_id_s);
+                showId = 0
+            }
+        }
+        function getUrlParam(name) {
+            //构造一个含有目标参数的正则表达式对象
+            var reg = new RegExp("(^|&)"+name+"=([^&]*)(&|$)");
+            //匹配目标参数
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                return decodeURI(r[2]);
+            } else {
+                //返回参数值
+                return "";
+            }
+        }
+    </script>
+</body>
+</html>

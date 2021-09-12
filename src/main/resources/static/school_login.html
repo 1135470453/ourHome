@@ -8,17 +8,40 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-    <form action="school.html">
-        姓名:<br>
-        <input type="text" name="name">
-        <br>
-        学号:<br>
-        <input type="text" name="student_id">
-        <br>
-        身份证号:<br>
-        <input type="text" name="user_id">
-        <br>
-        <button type="submit">提交</button>
-    </form>
+    <div class="container">
+        <div class="row" style="margin-top: 30%;">
+            <form>
+                <div class="form-group">
+                    <p>身份</p>
+                    <label class="radio-inline">
+                        <input type="radio" name="name" value="dad">爸爸
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="name" value="son">儿子
+                    </label>
+                </div>
+                <div class="form-group">
+                    <p>要在哪出去</p>
+                    <label class="radio-inline">
+                        <input type="radio" name="place" value="n">北门
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="place" value="s">南门
+                    </label>
+                    <br>
+                </div>
+            </form>
+            <button onclick="goToSchool()">提交</button>
+        </div>
+    </div>
 </body>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script>
+    function goToSchool() {
+        var name = $('input:radio[name="name"]:checked').val();
+        var place = $('input:radio[name="place"]:checked').val();
+        console.log(place,name);
+        window.location.href = "school"+place+".html?name="+name;
+    }
+</script>
 </html>
